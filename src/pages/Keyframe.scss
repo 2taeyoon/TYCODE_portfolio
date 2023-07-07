@@ -1,0 +1,109 @@
+@keyframes circle_rotate {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0) rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+    30% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(180deg);
+        filter: hue-rotate(180deg);
+    }
+    80% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes circle_rotate_bar {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    }
+    30% {
+        transform: translate(-50%, -50%) scale(1.2) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1) rotate(180deg);
+    }
+    80% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes floatingBubbles {
+    0% {
+        transform: translateY(0vh);
+        opacity: 0.5;
+        filter: hue-rotate(0deg);
+    }
+    10% { border: 5px solid #135a1e; }
+    20% { border: 0px solid #135a1e; }
+    30% { border: 5px solid #135a1e; }
+    40% { border: 0px solid #135a1e; }
+    50% { 
+        border: 5px solid #135a1e;
+        filter: hue-rotate(180deg);
+    }
+    60% { border: 0px solid #135a1e; }
+    70% { border: 5px solid #135a1e; }
+    80% { border: 0px solid #135a1e; }
+    90% { border: 5px solid #135a1e; }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0.5;
+        border: 0px solid #135a1e;
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes color_rotate {
+    0% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(180deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+@keyframes rotate_axis {
+    0% {
+        transform: rotateZ(10deg) perspective(500px) rotateY(0deg);
+    }
+    100% {
+        transform: rotateZ(10deg) perspective(500px) rotateY(360deg);
+    }
+}
+
+
+
+// 애니메이션 반응형
+@media all and (max-width:1280px){
+    @keyframes rotate_axis {
+        0% {
+            transform: rotateZ(10deg) perspective(600px) rotateY(0deg);
+        }
+        100% {
+            transform: rotateZ(10deg) perspective(600px) rotateY(360deg);
+        }
+    }
+}
+
+@media all and (max-width:1024px){
+    @keyframes rotate_axis {
+        0% {
+            transform: rotateZ(10deg) perspective(700px) rotateY(0deg);
+        }
+        100% {
+            transform: rotateZ(10deg) perspective(700px) rotateY(360deg);
+        }
+    }
+}

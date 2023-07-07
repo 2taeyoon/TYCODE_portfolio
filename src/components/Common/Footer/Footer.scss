@@ -1,0 +1,14 @@
+.footer { display: flex; align-items: center; justify-content: center; width: 100%; height: 50px; background: #fdfdfd;
+    &.other_footer { padding-left: 160px; }
+    .footer_text { color: #333; }
+}
+
+@media all and (max-width:768px){
+    .footer {
+        &.other_footer { padding-left: 0; }
+    }
+}
+
+@media all and (max-width:480px){
+    .footer .footer_text { font-size: 14px; }
+}

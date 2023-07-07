@@ -1,0 +1,52 @@
+.Project { 
+    .project_wrap { width: 100%; height: calc(100vh - 50px); padding-left: 160px; background: #0D0D0D; color: #fdfdfd; overflow-y: scroll;
+        .project_content_wrap { display: flex; flex-wrap: wrap; margin: 50px;
+            .project_link { width: calc(25% - 20px); margin: 10px; padding: 20px; border-radius: 5px; background: #1b1b1b;
+                .project_content { width: 100%;
+                    .project_title { font-size: 20px; font-weight: 600; }
+                    .project_date_type { display: flex; align-items: center; padding-top: 10px; color: #999; font-size: 14px;
+                        .project_date { margin-right: 10px; font-weight: 300; }
+                        .project_type { padding: 2px 10px; border-radius: 999px; color: #fdfdfd; font-weight: 300; }
+                    }
+                    .project_discription { padding: 25px 0 15px; color: #ccc; font-size: 14px; line-height: 150%; font-weight: 300; }
+                    .project_image { width: 100%; padding-bottom: 100%; }
+                    .project_skill_wrap { display: flex; flex-wrap: wrap; padding-top: 10px;
+                        .project_skill { width: calc(50% - 10px); margin: 5px;
+                            .project_skill_bg { display: flex; align-items: center; justify-content: center; width: 100%; padding: 3px; border-radius: 999px;
+                                .project_skill_image { width: 12px; height: 12px; }
+                                .project_skill_name { padding-left: 10px; font-size: 10px; }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (max-width:1280px){
+    .Project .project_wrap .project_content_wrap .project_link { width: calc(33.33% - 20px); }
+}
+
+@media all and (max-width:1024px){
+    .Project .project_wrap .project_content_wrap { margin: 40px;
+        .project_link { width: calc(50% - 20px); }
+    }
+}
+
+@media all and (max-width:768px){
+    .Project .project_wrap { padding-left: 0;
+        .project_content_wrap { margin: 120px 30px 30px;
+            .project_link .project_content { width: 100%; }
+        }
+    }
+}
+
+@media all and (max-width:550px){
+    .Project .project_wrap .project_content_wrap .project_link { width: 100%; }
+}
+
+@media all and (max-width:480px){
+    
+}

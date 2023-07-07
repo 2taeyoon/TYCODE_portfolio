@@ -1,0 +1,230 @@
+{
+    "project":[
+        {
+            "id": "05",
+            "title": "TYCODE",
+            "date": "2023년 07월",
+            "type": {
+                "text": "Personal",
+                "backgroundColor":"#d45a5a"
+            },
+            "description": "Html, Sass, Javascript, React, React router, Firebase로 진행한 포트폴리오",
+            "image": "project01",
+            "skill": [
+                {
+                    "html": [
+                        {
+                            "text":"Html",
+                            "icon":"html_icon",
+                            "backgroundColor":"#E34F26"
+                        }
+                    ],
+                    "sass": [
+                        {
+                            "text":"Sass",
+                            "icon":"Sass_icon",
+                            "backgroundColor":"#CC6699"
+                        }
+                    ],
+                    "javascript": [
+                        {
+                            "text":"Javascript",
+                            "icon":"javascript_icon",
+                            "backgroundColor":"#b5a522"
+                        }
+                    ],
+                    "react": [
+                        {
+                            "text":"React",
+                            "icon":"react_icon",
+                            "backgroundColor":"#57c0dd"
+                        }
+                    ],
+                    "ReactRouter": [
+                        {
+                            "text":"React router",
+                            "icon":"reactrouter_icon",
+                            "backgroundColor":"#CA4245"
+                        }
+                    ],
+                    "firebase": [
+                        {
+                            "text":"Firebase",
+                            "icon":"firebase_icon",
+                            "backgroundColor":"#FFCA28"
+                        }
+                    ]
+                }
+            ],
+            "detailLink":"https://2taeyoon.github.io/task/YOONDESIGN",
+            "detailDescription": "2023년 7월에 제작한 TYCODE는 Html, Sass, Javascript, React, React router, Firebase를 사용하여 개발하였습니다. TYCODE에는 기술 스택, 프로젝트 목록, 연락처 등의 정보가 포함되어 있습니다. React를 사용하여 컴포넌트 기반으로 제작하였으며, React router를 통해 다양한 페이지 간의 라우팅이 구현되어있습니다. 또한, Firebase를 사용하여 사용자가 작성한 댓글을 저장하고 불러오는 기능을 구현하였습니다."
+        },
+        {
+            "id": "04",
+            "title": "MyDays",
+            "date": "2023년 06월",
+            "type": {
+                "text": "Personal",
+                "backgroundColor":"#d45a5a"
+            },
+            "description": "Html, Sass, Javascript, Jquery, Firebase로 진행한 프로그레시브 웹&앱(PWA)",
+            "image": "project04",
+            "skill": [
+                {
+                    "html": [
+                        {
+                            "text":"Html",
+                            "icon":"html_icon",
+                            "backgroundColor":"#E34F26"
+                        }
+                    ],
+                    "sass": [
+                        {
+                            "text":"Sass",
+                            "icon":"Sass_icon",
+                            "backgroundColor":"#CC6699"
+                        }
+                    ],
+                    "javascript": [
+                        {
+                            "text":"Javascript",
+                            "icon":"javascript_icon",
+                            "backgroundColor":"#b5a522"
+                        }
+                    ],
+                    "jquery": [
+                        {
+                            "text":"Jquery",
+                            "icon":"jquery_icon",
+                            "backgroundColor":"#0769AD"
+                        }
+                    ],
+                    "firebase": [
+                        {
+                            "text":"Firebase",
+                            "icon":"firebase_icon",
+                            "backgroundColor":"#FFCA28"
+                        }
+                    ]
+                }
+            ],
+            "detailLink":"https://2taeyoon.github.io/task/MyDays",
+            "detailDescription": "2023년 7월에 제작한 TYCODE는 Html, Sass, Javascript, React, React router, Firebase를 사용하여 개발하였습니다. TYCODE에는 기술 스택, 프로젝트 목록, 연락처 등의 정보가 포함되어 있습니다. React를 사용하여 컴포넌트 기반으로 제작하였으며, React router를 통해 다양한 페이지 간의 라우팅이 구현되어있습니다. 또한, Firebase를 사용하여 사용자가 작성한 댓글을 저장하고 불러오는 기능을 구현하였습니다."
+        },
+        {
+            "id": "03",
+            "title": "YOONDESIGN",
+            "date": "2023년 05월",
+            "type": {
+                "text": "Personal",
+                "backgroundColor":"#d45a5a"
+            },
+            "description": "Html, Sass, Javascript로 진행한 반응형 웹사이트",
+            "image": "project03",
+            "skill": [
+                {
+                    "html": [
+                        {
+                            "text":"Html",
+                            "icon":"html_icon",
+                            "backgroundColor":"#E34F26"
+                        }
+                    ],
+                    "sass": [
+                        {
+                            "text":"Sass",
+                            "icon":"Sass_icon",
+                            "backgroundColor":"#CC6699"
+                        }
+                    ],
+                    "javascript": [
+                        {
+                            "text":"Javascript",
+                            "icon":"javascript_icon",
+                            "backgroundColor":"#b5a522"
+                        }
+                    ]
+                }
+            ],
+            "detailLink":"https://2taeyoon.github.io/task/YOONDESIGN",
+            "detailDescription": "2023년 7월에 제작한 TYCODE는 Html, Sass, Javascript, React, React router, Firebase를 사용하여 개발하였습니다. TYCODE에는 기술 스택, 프로젝트 목록, 연락처 등의 정보가 포함되어 있습니다. React를 사용하여 컴포넌트 기반으로 제작하였으며, React router를 통해 다양한 페이지 간의 라우팅이 구현되어있습니다. 또한, Firebase를 사용하여 사용자가 작성한 댓글을 저장하고 불러오는 기능을 구현하였습니다."
+        },
+        {
+            "id": "02",
+            "title": "Developer",
+            "date": "2023년 04월",
+            "type": {
+                "text": "Team",
+                "backgroundColor":"#5a73d4"
+            },
+            "description": "Html, Css, Javascript로 진행한 팀프로젝트 반응형 웹사이트",
+            "image": "project02",
+            "skill": [
+                {
+                    "html": [
+                        {
+                            "text":"Html",
+                            "icon":"html_icon",
+                            "backgroundColor":"#E34F26"
+                        }
+                    ],
+                    "css": [
+                        {
+                            "text":"Css",
+                            "icon":"css_icon",
+                            "backgroundColor":"#1572B6"
+                        }
+                    ],
+                    "javascript": [
+                        {
+                            "text":"Javascript",
+                            "icon":"javascript_icon",
+                            "backgroundColor":"#b5a522"
+                        }
+                    ]
+                }
+            ],
+            "detailLink":"https://2taeyoon.github.io/task/Developer",
+            "detailDescription": "2023년 7월에 제작한 TYCODE는 Html, Sass, Javascript, React, React router, Firebase를 사용하여 개발하였습니다. TYCODE에는 기술 스택, 프로젝트 목록, 연락처 등의 정보가 포함되어 있습니다. React를 사용하여 컴포넌트 기반으로 제작하였으며, React router를 통해 다양한 페이지 간의 라우팅이 구현되어있습니다. 또한, Firebase를 사용하여 사용자가 작성한 댓글을 저장하고 불러오는 기능을 구현하였습니다."
+        },
+        {
+            "id": "01",
+            "title": "Netmable",
+            "date": "2023년 03월",
+            "type": {
+                "text": "Personal",
+                "backgroundColor":"#d45a5a"
+            }
+            ,
+            "description": "Html, Css, Javascript로 진행한 웹사이트 클론",
+            "image": "project01",
+            "skill": [
+                {
+                    "html": [
+                        {
+                            "text":"Html",
+                            "icon":"html_icon",
+                            "backgroundColor":"#E34F26"
+                        }
+                    ],
+                    "css": [
+                        {
+                            "text":"Css",
+                            "icon":"css_icon",
+                            "backgroundColor":"#1572B6"
+                        }
+                    ],
+                    "javascript": [
+                        {
+                            "text":"Javascript",
+                            "icon":"javascript_icon",
+                            "backgroundColor":"#b5a522"
+                        }
+                    ]
+                }
+            ],
+            "detailLink":"https://2taeyoon.github.io/task/netmable",
+            "detailDescription": "2023년 7월에 제작한 TYCODE는 Html, Sass, Javascript, React, React router, Firebase를 사용하여 개발하였습니다. TYCODE에는 기술 스택, 프로젝트 목록, 연락처 등의 정보가 포함되어 있습니다. React를 사용하여 컴포넌트 기반으로 제작하였으며, React router를 통해 다양한 페이지 간의 라우팅이 구현되어있습니다. 또한, Firebase를 사용하여 사용자가 작성한 댓글을 저장하고 불러오는 기능을 구현하였습니다."
+        }
+    ]
+}
