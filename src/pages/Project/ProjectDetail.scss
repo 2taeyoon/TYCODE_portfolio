@@ -1,17 +1,21 @@
 .ProjectDetail { width: 100%; background: #fdfdfd;
     .detail_wrap { width: 100%; height: 100vh;
-        .detail_top_wrap { position: relative;
-            .detail_ham_btn { position: absolute; top: 80px; right: 100px; width: 40px; height: 35px;
-                &:hover span { background: #58c96b; animation: color_rotate 2s linear infinite; }
-                span { position: absolute; width: 100%; height: 3px; background: #383838; transition: .3s;
-                    &:nth-child(1) { left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-22.5deg); }
-                    &:nth-child(2) { left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(22.5deg);; }
+        .detail_top_wrap { display: flex; flex-direction: column; align-items: center; position: relative;
+            .detail_ham_btn { position: absolute; top: 45px; right: 12%; width: 30px; height: 25px;
+                &:hover .animate_cursor span { background: #58c96b; animation: color_rotate 2s linear infinite; }
+                .animate_cursor { width: 30px; height: 25px;
+                    span { position: absolute; width: 100%; height: 3px; background: #383838; transition: .3s;
+                        &:nth-child(1) { left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-22.5deg); }
+                        &:nth-child(2) { left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(22.5deg);; }
+                    }
                 }
             }
-            .detail_type_text {}
-            .detail_title {}
-            .detail_link_wrap {}
-            .detail_Description {}
+            .detail_type_text { width: 200px; margin-top: 100px; padding-top: 25px; border-top: 1px solid #383838; font-size: 14px; font-weight: 500; text-align: center; }
+            .detail_title { padding-top: 10px; font-size: 32px; font-weight: 900; }
+            .detail_link_wrap { display: flex; align-items: center; padding-top: 15px;
+                a { width: 100px; text-align: center; font-weight: 500; }
+            }
+            .detail_Description { width: 60%; padding-top: 20px; }
         }
     }
 }
