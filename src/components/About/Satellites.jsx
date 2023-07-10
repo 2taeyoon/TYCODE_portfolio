@@ -71,7 +71,7 @@ const Satellites = () => {
                         className='satellite'
                         style={{ top: `${top}px`, transform: `rotateY(${index * 22.5}deg) translateZ(${translateZ}px)` }}
                     >
-                        <span onMouseMove={animateCursor} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
+                        <span className='cursor_pointer' onMouseMove={animateCursor} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
                             <span className='animate_cursor'>
                                 { getSatelliteContent(index) }
                             </span>

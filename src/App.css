@@ -1,4 +1,7 @@
-.App { overflow: hidden; }
+.App { overflow: hidden; cursor: none; }
+.App.default_cursor { cursor: default; }
+.App.default_cursor .cursor_pointer { cursor: pointer; }
+
 .animate_cursor { display: inline-block; pointer-events: none; transition: transform 0.1s linear; }
 .cursor { pointer-events: none; position: fixed; padding: 10px; background-color: #fdfdfd; border-radius: 50%; mix-blend-mode: difference; transition: transform 0.3s ease; z-index: 999; }
 .cursor_scale { transform: translate(-50%, -50%) scale(3); }

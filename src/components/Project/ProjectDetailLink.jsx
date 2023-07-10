@@ -1,15 +1,12 @@
 import React from 'react'
 
-const ProjectDetailLink = ({github, demo, animateCursor, handleCursorEnter, handleCursorLeave}) => {
+const ProjectDetailLink = ({ github, demo, animateCursor, handleCursorEnter, handleCursorLeave }) => {
     return (
-        <div className='detail_link_wrap'>
-            <div onMouseMove={animateCursor} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
-                <a className='animate_cursor' href={github} target='_blank' rel='noopener noreferrer'>Github</a>
-            </div>
-            <div onMouseMove={animateCursor} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
-                <a className='animate_cursor' href={demo} target='_blank' rel='noopener noreferrer'>Demo</a>
-            </div>
-        </div>
+            [github, demo].map((item, index) => (
+                <a key={index} className='detail_link_item cursor_pointer' href={item} target='_blank' rel='noopener noreferrer' onMouseMove={animateCursor} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
+                    <div className='animate_cursor'>{ index === 0 ? 'Github' : 'Demo' }</div>
+                </a>
+            ))
     )
 }
 

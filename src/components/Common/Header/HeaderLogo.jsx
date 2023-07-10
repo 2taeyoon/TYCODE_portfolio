@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const HeaderLogo = ({ animateCursor, handleCursorEnter, handleCursorLeave }) => {
     return (
-        <Link to='/' className='header_logo_wrap' onMouseMove={animateCursor} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
+        <Link to='/' className='header_logo_wrap cursor_pointer' onMouseMove={animateCursor} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
             <div className='animate_cursor'>
                 <div className='header_logo'>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 397.1 273.8">
