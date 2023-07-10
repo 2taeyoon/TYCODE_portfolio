@@ -1,7 +1,7 @@
 @import '../Include.scss';
 
 .ProjectDetail { width: 100%; background: #fdfdfd;
-    .detail_wrap { display: flex; flex-direction: column; align-items: center; position: relative; width: 100%; height: 100vh;
+    .detail_wrap { display: flex; flex-direction: column; align-items: center; position: relative; width: 100%;
         .detail_top_wrap { display: flex; flex-direction: column; align-items: center;
             .detail_ham_btn { position: absolute; top: 45px; right: 12%; width: 30px; height: 25px;
                 .animate_cursor { width: 30px; height: 25px;
