@@ -7,7 +7,7 @@ const ProjectContent = ({ id, title, date, type, description, image, skill }) =>
     const { animateCursor, handleCursorEnter, handleCursorLeave } = useContext(CursorAnimationContext);
     const { backgroundColor, text } = type;
     return (
-        <Link to={id}  className="project_link cursor_pointer" onMouseMove={animateCursor} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
+        <Link to={id}  className="project_link cursor_pointer" onMouseMove={animateCursor} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave} onClick={handleCursorLeave}>
             <div className='project_content animate_cursor'>
                 <div className='project_title'>{title}</div>
                 <div className='project_date_type'>

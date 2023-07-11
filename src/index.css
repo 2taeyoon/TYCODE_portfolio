@@ -21,7 +21,7 @@ time, mark, audio, video, textarea, input {
 	border: 0;
 	vertical-align: baseline;
     box-sizing: border-box;
-    word-break: normal;
+    word-break: keep-all;
     letter-spacing: 0;
     font: inherit;
     font-weight: 400;

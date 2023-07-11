@@ -48,11 +48,11 @@ const Satellites = () => {
         } else if (index === 1 || index === 9) {
             return 'CSS';
         } else if (index === 2 || index === 10) {
-            return 'Javascript';
+            return 'JavaScript';
         } else if (index === 3 || index === 11) {
             return 'Git';
         } else if (index === 4 || index === 12) {
-            return 'Notion';
+            return 'jQuery';
         } else if (index === 5 || index === 13) {
             return 'Sass';
         } else if (index === 6 || index === 14) {

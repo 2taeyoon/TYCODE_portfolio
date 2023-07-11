@@ -2,8 +2,9 @@ import React from 'react'
 import { useParams } from 'react-router-dom';
 import projectDetailJson from '../../data/project.json'
 import ProjectDetailTop from './ProjectDetailTop';
-import ProjectMiddle from './ProjectMiddle';
-//import aa from './image/projectImage/81675.jpg'
+import ProjectDtailMiddle from './ProjectDetailMiddle';
+import ProjectDtailBottom from './ProjectDtailBottom';
+
 
 const ProjectDetailWrap = () => {
     const { id } = useParams();
@@ -12,8 +13,8 @@ const ProjectDetailWrap = () => {
     return (
         <div className='detail_wrap'>
             <ProjectDetailTop projectFind={projectFind}/>
-            <ProjectMiddle projectFind={projectFind}/>
-            <div style={{ width: '60%', paddingBottom: '30%', background: ' url(/image/projectImage/project_detail04.jpg) no-repeat center center / cover' }} />
+            <ProjectDtailMiddle projectFind={projectFind}/>
+            <ProjectDtailBottom projectFind={projectFind}/>
         </div>
     )
 }
