@@ -1,5 +1,16 @@
 @import '../Include.scss';
 
 .Contact {
-    .contact_wrap { width: 100%; height: calc(100vh - 50px); background-color: lightgreen; }
+    .contact_wrap { @include project_contact();
+        .contact_content_wrap { @include project_contact_wrap();
+            .contact_comment_wrap {
+                form {
+                    #comment_file { display: none; }
+                    .comment_file_label {}
+                    #contact_comment {}
+                    #contact_comment_submit { background-color: red; }
+                }
+            }
+        }
+    }
 }

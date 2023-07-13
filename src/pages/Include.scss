@@ -7,3 +7,17 @@
     .project_skill_image { width: 12px; height: 12px; }
     .project_skill_name { font-size: 10px; }
 }
+
+@mixin project_contact { width: 100%; height: calc(100vh - 50px); padding-left: 160px; background: #0D0D0D; color: #fdfdfd; overflow-y: scroll;
+    @media all and (max-width:768px){
+        padding-left: 0;
+    }
+}
+@mixin project_contact_wrap { display: flex; flex-wrap: wrap; margin: 50px;
+    @media all and (max-width:1024px){
+        margin: 40px;
+    }
+    @media all and (max-width:768px){
+        margin: 120px 30px 30px;
+    }
+}

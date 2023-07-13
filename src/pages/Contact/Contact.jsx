@@ -1,11 +1,11 @@
 import React from 'react';
 import './Contact.scss';
-import ContactContent from '../../components/Contact/ContactContent';
+import ContactWrap from '../../components/Contact/ContactWrap';
 
 const Contact = () => {
     return (
         <div className='Contact'>
-            <ContactContent/>
+            <ContactWrap/>
         </div>
     )
 }

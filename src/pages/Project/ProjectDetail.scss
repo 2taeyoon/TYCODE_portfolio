@@ -19,7 +19,7 @@
         }
         .detail_middle_wrap { @include flexColumnCenter(); width: 100%;
             .detail_Description { width: 60%; padding-top: 30px; text-align: center; font-size: 14px; line-height: 130%; }
-            .project_skill_wrap { display: flex; flex-wrap: wrap; justify-content: center; width: 95%; margin: 10px auto 10px;
+            .project_skill_wrap { display: flex; flex-wrap: wrap; justify-content: center; width: 80%; margin: 10px auto 10px;
                 .project_skill { margin: 5px;
                     .project_skill_bg { @include project_skill_bg(); background: #383838; color: #fdfdfd; }
                 }
@@ -27,7 +27,7 @@
         }
         .detail_bottom_wrap { @include flexColumnCenter(); width: 100%;
             .detail_bottom_image { width: 60%; padding-bottom: 30%; }
-            .detail_bottom_text { display: flex; flex-wrap: wrap; justify-content: center; width: 95%; margin-top: 10px;
+            .detail_bottom_text { display: flex; flex-wrap: wrap; justify-content: center; width: 90%; margin-top: 10px;
                 div { margin: 0 5px; padding: 7px 15px; border-radius: 999px; background: #383838; color: #fdfdfd; font-size: 12px; }
             }
         }
@@ -35,14 +35,27 @@
 }
 
 
+@media all and (max-width:1280px){
+    .ProjectDetail .detail_wrap {
+        .detail_middle_wrap .detail_Description { width: 70%; }
+        .detail_bottom_wrap .detail_bottom_image { width: 70%; padding-bottom: 40%; }
+    }
+}
+
 @media all and (max-width:1024px){
-    .ProjectDetail .detail_wrap .detail_bottom_wrap .detail_bottom_image { width: 70%; padding-bottom: 40%; }
+    .ProjectDetail .detail_wrap .detail_bottom_wrap .detail_bottom_image { width: 70%; padding-bottom: 48%; }
 }
 
 @media all and (max-width:768px){
-    .ProjectDetail .detail_wrap .detail_bottom_wrap .detail_bottom_image { width: 80%; padding-bottom: 50%; }
+    .ProjectDetail .detail_wrap {
+        .detail_middle_wrap .detail_Description { width: 80%; }
+        .detail_bottom_wrap .detail_bottom_image { width: 80%; padding-bottom: 60%; }
+    }
 }
 
 @media all and (max-width:480px){
-    .ProjectDetail .detail_wrap .detail_bottom_wrap .detail_bottom_image { width: 90%; padding-bottom: 50%; }
+    .ProjectDetail .detail_wrap {
+        .detail_middle_wrap .detail_Description { width: 90%; }
+        .detail_bottom_wrap .detail_bottom_image { width: 90%; padding-bottom: 60%; }
+    }
 }

@@ -1,8 +1,8 @@
 @import '../Include.scss';
 
 .Project { 
-    .project_wrap { width: 100%; height: calc(100vh - 50px); padding-left: 160px; background: #0D0D0D; color: #fdfdfd; overflow-y: scroll;
-        .project_content_wrap { display: flex; flex-wrap: wrap; margin: 50px;
+    .project_wrap { @include project_contact();
+        .project_content_wrap { @include project_contact_wrap();
             .project_link { width: calc(25% - 20px); margin: 10px; padding: 20px; border-radius: 5px; background: #1b1b1b;
                 .project_content { width: 100%;
                     .project_title { font-size: 20px; font-weight: 600; }
@@ -29,17 +29,11 @@
 }
 
 @media all and (max-width:1024px){
-    .Project .project_wrap .project_content_wrap { margin: 40px;
-        .project_link { width: calc(50% - 20px); }
-    }
+    .Project .project_wrap .project_content_wrap .project_link { width: calc(50% - 20px); }
 }
 
 @media all and (max-width:768px){
-    .Project .project_wrap { padding-left: 0;
-        .project_content_wrap { margin: 120px 30px 30px;
-            .project_link .project_content { width: 100%; }
-        }
-    }
+    .Project .project_wrap .project_content_wrap .project_link .project_content { width: 100%; }
 }
 
 @media all and (max-width:550px){
