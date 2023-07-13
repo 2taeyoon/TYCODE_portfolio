@@ -13,7 +13,7 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 
-export const handleCommentSubmit = (event) => {
+export const handleCommentSubmit = (event, labelRef) => {
     event.preventDefault();
 
     const now = new Date();
@@ -29,18 +29,25 @@ export const handleCommentSubmit = (event) => {
     });
 
     const timeString = `${ampm} ${hour12.toString()}시 ${minute.toString().padStart(2, '0')}분`;
-    const comment = event.target[1].value;
-    
-    if(comment.trim() === ''){
-        return alert('내용을 입력해주세요.');
-    }
-    if(badWordKor.includes(comment)){
-        return alert('금칙어가 포함되어 있습니다.');
-    }
     const dateTime = dateTimeString + " " + timeString;
 
+    const commentInput = event.target[1];
+    if(commentInput.value.trim() === ''){
+        return alert('내용을 입력해주세요.');
+    }
+    if(badWordKor.includes(commentInput.value)){
+        return alert('금칙어가 포함되어 있습니다.');
+    }
+    
+    const labelBackgroundImage = labelRef.current.style.backgroundImage; // labelRef useRef로 component에서만 사용이 가능하므로 우선 인자로 넘겨준다
+
     const commentsRef = ref(database, 'comments');
-    push(commentsRef, { comment, dateTime });
+    push(commentsRef, {
+        comment: commentInput.value,
+        dateTime: dateTime,
+        image: labelBackgroundImage
+    });
+    commentInput.value = '';
 };
 
 export const fetchComments = (callback) => {
@@ -51,3 +58,10 @@ export const fetchComments = (callback) => {
         callback(commentsList);
     })
 }
+
+
+
+
+//const labelImageTag = event.target[0].labels[0];
+//const labelImageData = getComputedStyle(labelImageTag);
+//console.log('backgroundImage', labelImageData)

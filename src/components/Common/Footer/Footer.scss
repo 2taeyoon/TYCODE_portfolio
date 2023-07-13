@@ -6,9 +6,6 @@
 @media all and (max-width:768px){
     .footer {
         &.other_footer { padding-left: 0; }
+        .footer_text { font-size: 14px; }
     }
-}
-
-@media all and (max-width:480px){
-    .footer .footer_text { font-size: 14px; }
 }
