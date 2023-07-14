@@ -1,6 +1,11 @@
 @import '../../../pages/Include.scss';
 
 .header { display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; width: 100%; height: 90px; margin-top: 50px; padding: 0 150px; box-sizing: border-box; color: #fdfdfd; font-size: 18px; transition: 1s; z-index: 1;
+    &.active.on .ham_btn_wrap {
+        &:hover .ham_btn span { background: #58c96b; animation: color_rotate 2s linear infinite; }
+        .ham_btn span { background: #fdfdfd; }
+    }
+
     &.active { margin-top: 0; border-bottom: 1px solid #ddd; background: #fdfdfd; color: #333;
         .header_logo_wrap {
             .header_logo { 

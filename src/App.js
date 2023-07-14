@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect } from 'react';
+import React, { useState, createContext, useEffect, useContext } from 'react';
 import { useLocation, Outlet } from 'react-router-dom';
 import Header from './components/Common/Header/Header';
 import './App.css';
@@ -7,10 +7,12 @@ import './pages/Include.scss'
 import Footer from './components/Common/Footer/Footer';
 
 
-export const CursorAnimationContext = createContext();
+const CursorAnimationContext = createContext();
+export const useCursorAnimation = () => {
+    return useContext(CursorAnimationContext);
+};
 
 const App = () => {
-
     const [ cursorPosition, setCursorPosition ] = useState({ x: 0, y: 0 });
     const [ cursorHovered, setCursorHovered ] = useState(false);
     const [ windowWidth, setWindowWidth ] = useState(false);
@@ -62,8 +64,20 @@ const App = () => {
         animateCursor.style.transform = 'translate(0, 0)';
         setCursorHovered(false);
     };
+
+    // transform 애니메이션이 적용되지 않은 함수
+    const animateNoneCursorEnter = () => {
+        if (!windowWidth) return;
+        setCursorHovered(true);
+    }
+
+    // transform 애니메이션이 적용되지 않은 함수
+    const animateNoneCursorLeave = () => {
+        if (!windowWidth) return;
+        setCursorHovered(false);
+    }
     
-    const cursorValue = { cursorHovered, animateCursor, handleCursorEnter, handleCursorLeave }
+    const cursorValue = { animateCursor, handleCursorEnter, handleCursorLeave, animateNoneCursorEnter, animateNoneCursorLeave }
 
     const location = useLocation();
     const showHeader = location.pathname === '/' || location.pathname === '/project' || location.pathname === '/contact';

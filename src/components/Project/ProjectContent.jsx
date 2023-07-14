@@ -1,10 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { CursorAnimationContext } from '../../App'
+import { useCursorAnimation } from '../../App'
 import ProjectSkillWrap from './ProjectSkillWrap';
 
+
 const ProjectContent = ({ id, title, date, type, description, image, skill }) => {
-    const { animateCursor, handleCursorEnter, handleCursorLeave } = useContext(CursorAnimationContext);
+    const { animateCursor, handleCursorEnter, handleCursorLeave } = useCursorAnimation();
     const { backgroundColor, text } = type;
     return (
         <Link to={id}  className="project_link cursor_pointer" onMouseMove={animateCursor} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave} onClick={handleCursorLeave}>

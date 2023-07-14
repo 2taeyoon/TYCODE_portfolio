@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'
-import { CursorAnimationContext } from '../../App'
+import React from 'react'
+import { useCursorAnimation } from '../../App'
 
 
 const AboutMainText = ({bubbleClickHandler}) => {
 
-    const { animateCursor, handleCursorEnter, handleCursorLeave } = useContext(CursorAnimationContext);
+    const { animateCursor, handleCursorEnter, handleCursorLeave } = useCursorAnimation();
 
     return (
         <div className='main_text'>

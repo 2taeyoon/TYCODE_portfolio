@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'
-import { CursorAnimationContext } from '../../App';
+import React from 'react'
+import { useCursorAnimation } from '../../App'
 import ProjectHamBtn from './ProjectHamBtn'
 import ProjectDetailLink from './ProjectDetailLink'
 
 const ProjectDetailTop = ({projectFind}) => {
-    const { animateCursor, handleCursorEnter, handleCursorLeave } = useContext(CursorAnimationContext);
+    const { animateCursor, handleCursorEnter, handleCursorLeave } = useCursorAnimation();
     const { type, title, } = projectFind;
     const { detailGithub, detailDemo } = projectFind.detail;
     return (

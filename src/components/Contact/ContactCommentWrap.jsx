@@ -1,16 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { handleCommentSubmit, fetchComments } from '../../api/firebase'
+import { fetchComments } from '../../api/firebase'
+import ContactCommentForm from './ContactCommentForm';
+import ContactCommentItem from './ContactCommentItem';
+
 
 const ContactCommentWrap = () => {
     const [ comment, setComment ] = useState([]);
     const labelRef = useRef();
+    const contactCommentItemRef = useRef();
 
     useEffect(()=>{
         fetchComments((commentsList)=>{
             setComment(commentsList);
+            contactCommentItemRef.current.scrollTop = 0;
         });
     },[]);
-    
 
     const commentFile = (event) => {
         const file = event.target.files[0]; // 내가 선택한 첫번째 파일을 객체 형태로 가져옴
@@ -25,29 +29,10 @@ const ContactCommentWrap = () => {
 
     return (
         <div className='contact_comment_wrap'>
-            <form className='contact_comment_form' onSubmit={ (event) => handleCommentSubmit(event, labelRef) }>
-                <input id='comment_file' type='file' onChange={commentFile}/>
-                <label
-                    htmlFor='comment_file'
-                    className='comment_file_label'
-                    ref={labelRef}
-                    style={{ background: `url('./image/contactImage/noProfile0.png') no-repeat center center / cover` }}>
-                </label>
-                <input
-                    id='contact_comment'
-                    type='text'
-                    placeholder='댓글을 남겨주세요!'
-                    onFocus={ (event) => {event.target.placeholder = ''} }
-                    onBlur={ (event) => {event.target.placeholder = '댓글을 남겨주세요!'} }/>
-                <button id='contact_comment_submit' type='submit'>작성</button>
-            </form>
-            <ul className='contact_comment_item'>
+            <ContactCommentForm commentFile={commentFile} labelRef={labelRef}/>
+            <ul className='contact_comment_item' ref={contactCommentItemRef}>
                 { comment && comment.map((commentItem, index)=>
-                    ( <li key={index}>
-                        <div className='contact_comment_item_image' style={{ background: `${commentItem.image} no-repeat center center / cover` }}></div>
-                        <div className='contact_comment_item_date'>{commentItem.dateTime}</div>
-                        <div className='contact_comment_item_comment'>{commentItem.comment}</div>
-                    </li> )
+                    ( <ContactCommentItem key={index} commentItem={commentItem}/> )
                 )}
             </ul>
         </div>

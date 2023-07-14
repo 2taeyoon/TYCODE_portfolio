@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react'
-import { CursorAnimationContext } from '../../App'
+import React, { useState, useEffect } from 'react'
+import { useCursorAnimation } from '../../App'
 
 
 const Satellites = () => {
     
-    const { animateCursor, handleCursorEnter, handleCursorLeave } = useContext(CursorAnimationContext);
+    const { animateCursor, handleCursorEnter, handleCursorLeave } = useCursorAnimation();
     const [ satelliteTops, setSatelliteTops ] = useState([]);
     const [ translateZ, setTranslateZ ] = useState('320');
     

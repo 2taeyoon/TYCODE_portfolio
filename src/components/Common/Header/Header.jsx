@@ -1,5 +1,5 @@
-import React, { useContext, useState, useEffect } from 'react'
-import { CursorAnimationContext } from '../../../App'
+import React, { useState, useEffect } from 'react'
+import { useCursorAnimation } from '../../../App'
 import './Header.scss'
 import HeaderLogo from './HeaderLogo'
 import HeaderList from './HeaderList'
@@ -10,7 +10,7 @@ import HeaderHamList from './HeaderHamList'
 
 const Header = ({location}) => {
 
-    const { animateCursor, handleCursorEnter, handleCursorLeave } = useContext(CursorAnimationContext);
+    const { animateCursor, handleCursorEnter, handleCursorLeave } = useCursorAnimation();
 
     const [scrollY, setScrollY] = useState(0);
     const [hamBtn, setHamBtn] = useState(false);

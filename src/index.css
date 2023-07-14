@@ -1,8 +1,11 @@
 @charset "UTF-8";
 
 ::-webkit-scrollbar { display: none; }
-body { max-width: 100%; color: #333; background: #fdfdfd; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 a { cursor: none; }
+label { cursor: none; }
+input { cursor: none; }
+body { max-width: 100%; color: #333; background: #fdfdfd; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -55,7 +58,7 @@ button {
     border-radius:0;
     padding:0;
     overflow:visible;
-    cursor:pointer;
+    cursor:none;
 }
 
 textarea { border: unset; resize: none; }

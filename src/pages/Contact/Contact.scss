@@ -3,21 +3,64 @@
 .Contact {
     .contact_wrap { @include project_contact();
         .contact_content_wrap { @include project_contact_wrap(); flex-direction: column;
-            .contact_comment_wrap { max-width: 100%;
-                .contact_comment_form { display: flex;
-                    #comment_file { display: none; }
-                    .comment_file_label { display: block; width: 35px; height: 35px; border-radius: 999px; }
-                    #contact_comment { width: 100%; outline: none; }
-                    #contact_comment_submit { background-color: red; }
+            .contact_comment_wrap { width: 80%; margin: 0 auto;
+                .contact_comment_form { display: flex; align-items: center; justify-content: space-between; padding: 5px 0; border-radius: 999px; background: #222;
+                    .contact_comment_input_wrap { display: flex; align-items: center; width: 90%;
+                        #comment_file { display: none; }
+                        .comment_file_label { display: block; width: 35px; height: 35px; margin-left: 10px; border-radius: 999px; }
+                        #contact_comment { width: calc(100% - 55px); margin-left: 10px; padding: 10px 10px 10px 0; background: none; outline: none;
+                            &::placeholder { color: #999; font-size: 16px; }
+                            &:focus { color: #fdfdfd; }
+                        }
+                    }
+                    #contact_comment_submit { margin: 2px 25px 0 0; padding: 5px;
+                        svg { width: 20px; height: 20px; }
+                    }
                 }
-                .contact_comment_item {
-                    li {
-                        .contact_comment_item_image { width: 35px; height: 35px; }
-                        .contact_comment_item_date {}
-                        .contact_comment_item_comment {}
+                .contact_comment_item { display: flex; align-items: center; flex-direction: column; margin-top: 20px; max-width: 100%; height: 400px; overflow-y: scroll;
+                    &::-webkit-scrollbar { display: block; width: 10px; }
+                    &::-webkit-scrollbar-thumb { background-color: #222; border-radius: 999px; }
+                    &::-webkit-scrollbar-track { border: 1px solid #222; border-radius: 999px; }
+
+                    li { display: flex; align-items: center; width: calc(95% - 30px); margin: 10px 20px; padding: 10px; border-radius: 20px; background-color: #222;
+                        .contact_comment_item_image { width: 35px; height: 35px; border-radius: 999px; }
+                        .contact_comment_item_text_wrap { display: flex; flex-direction: column; width: calc(100% - 45px); margin-left: 10px;
+                            .contact_comment_item_comment { font-size: 16px; }
+                            .contact_comment_item_date { color: #999; font-size: 14px; }
+                        }
                     }
                 }
             }
+        }
+    }
+}
+
+
+@media all and (max-width:768px){
+    .Contact .contact_wrap .contact_content_wrap .contact_comment_wrap { width: 90%;
+        .contact_comment_form {
+            .contact_comment_input_wrap {
+                .comment_file_label { width: 30px; height: 30px; }
+                #contact_comment::placeholder { font-size: 15px; }
+            }
+            #contact_comment_submit svg { width: 17px; height: 17px; }
+        }
+        .contact_comment_item li {
+            .contact_comment_item_image { width: 30px; height: 30px; }
+            .contact_comment_item_text_wrap {
+                .contact_comment_item_comment { font-size: 15px; }
+                .contact_comment_item_date { font-size: 13px; }
+            }
+        }
+    }
+}
+
+@media all and (max-width:480px){
+    .Contact .contact_wrap .contact_content_wrap .contact_comment_wrap { width: 100%;
+        .contact_comment_form .contact_comment_input_wrap #contact_comment::placeholder { font-size: 14px; }
+        .contact_comment_item li .contact_comment_item_text_wrap {
+            .contact_comment_item_comment { font-size: 14px; }
+            .contact_comment_item_date { font-size: 12px; }
         }
     }
 }
