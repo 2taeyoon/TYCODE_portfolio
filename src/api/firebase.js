@@ -12,7 +12,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-const contactDate = (date)=>{
+const contactDate = (date) => {
     const hour = date.getHours(); // 로컬 시간 추출
     const minute = date.getMinutes(); // 로컬 분 추출
     const ampm = hour >= 12 ? '오후' : '오전'; // 12를 기준으로 오후와 오전을 표시
@@ -36,16 +36,16 @@ export const handleCommentSubmit = (event, labelRef) => {
     const dateTime = contactDate(now); // contactDate 함수의 인자로 로컬의 현재 시간 값을 보내줌
 
     const commentInput = event.target[1];
-    if(commentInput.value.trim() === ''){ // 문자열의 앞뒤 공백을 제거(trim)하여 빈 문자열일 경우 return 시킴
+    if (commentInput.value.trim() === '') { // 문자열의 앞뒤 공백을 제거(trim)하여 빈 문자열일 경우 return 시킴
         return alert('내용을 입력해주세요.');
     }
-    if(badWordKor.includes(commentInput.value)){ // 금칙어 목록에서 commentInput의 value값을 순회하여 일치하면(includes) return 시킴
+    if (badWordKor.includes(commentInput.value)) { // 금칙어 목록에서 commentInput의 value값을 순회하여 일치하면(includes) return 시킴
         return alert('금칙어가 포함되어 있습니다.');
     }
     const labelBackgroundImage = labelRef.current.style.backgroundImage; // labelRef useRef로 component에서만 사용이 가능하므로 우선 인자로 넘겨준다
 
     const commentsRef = ref(database, 'comments'); // firebase의 database의 'comments'에 접근
-    
+
     const newComment = { // firebase에 저장할 객체
         comment: commentInput.value,
         dateTime: dateTime,

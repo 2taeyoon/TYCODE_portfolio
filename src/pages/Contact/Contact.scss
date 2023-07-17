@@ -31,13 +31,20 @@
                     }
                 }
             }
-            .contact_email_views_wrap {}
+            .contact_email_views_wrap { display: flex; justify-content: space-between; width: 80%; margin: 0 auto;
+                .contact_email_wrap { display: flex; align-items: center;
+                    .contact_email_title { padding: 0 10px; border-right: 3px solid #fdfdfd; font-size: 20px; font-weight: 600; }
+                    .contact_email { padding: 0 10px; }
+                }
+                .contact_views_hits {}
+            }
         }
     }
 }
 
 
 @media all and (max-width:768px){
+    .Contact .contact_wrap .contact_content_wrap .contact_email_views_wrap { width: 90%; }
     .Contact .contact_wrap .contact_content_wrap .contact_comment_wrap { width: 90%;
         .contact_comment_form {
             .contact_comment_input_wrap {
