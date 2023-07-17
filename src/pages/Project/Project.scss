@@ -1,4 +1,4 @@
-@import '../Include.scss';
+@import '../Mixin.scss';
 
 .Project { 
     .project_wrap { @include project_contact();

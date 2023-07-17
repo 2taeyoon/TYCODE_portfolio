@@ -1,4 +1,4 @@
-@import '../Include.scss';
+@import '../Mixin.scss';
 
 .Contact {
     .contact_wrap { @include project_contact();
@@ -31,6 +31,7 @@
                     }
                 }
             }
+            .contact_email_views_wrap {}
         }
     }
 }

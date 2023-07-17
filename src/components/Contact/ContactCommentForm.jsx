@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ContactCommentSubmit from './ContactCommentSubmit'
 import { handleCommentSubmit } from '../../api/firebase'
 import { useCursorAnimation } from '../../App';
@@ -6,6 +6,11 @@ import { useCursorAnimation } from '../../App';
 
 const ContactCommentForm = ({ commentFile, labelRef }) => {
     const { animateNoneCursorEnter, animateNoneCursorLeave } = useCursorAnimation();
+    const [ ramdomImage, setRamdomImage ] = useState(0);
+
+    useEffect(()=>{
+        setRamdomImage(Math.floor(Math.random() * 8) +1);
+    },[])
 
     return (
         <form className='contact_comment_form' onSubmit={(event) => handleCommentSubmit(event, labelRef)}>
@@ -15,7 +20,7 @@ const ContactCommentForm = ({ commentFile, labelRef }) => {
                     htmlFor='comment_file'
                     className='comment_file_label cursor_pointer'
                     ref={labelRef}
-                    style={{ background: `url('./image/contactImage/noProfile0.png') no-repeat center center / cover` }}
+                    style={{ background: `url('./image/contactImage/noProfile${ramdomImage}.png') no-repeat center center / cover` }}
                     onMouseEnter={animateNoneCursorEnter} onMouseLeave={animateNoneCursorLeave}>
                 </label>
                 <input

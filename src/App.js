@@ -3,7 +3,6 @@ import { useLocation, Outlet } from 'react-router-dom';
 import Header from './components/Common/Header/Header';
 import './App.css';
 import './pages/Keyframe.scss'
-import './pages/Include.scss'
 import Footer from './components/Common/Footer/Footer';
 
 

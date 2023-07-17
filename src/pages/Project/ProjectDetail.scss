@@ -1,4 +1,4 @@
-@import '../Include.scss';
+@import '../Mixin.scss';
 
 .ProjectDetail { width: 100%; background: #fdfdfd;
     .detail_wrap { @include flexColumnCenter(); position: relative; width: 100%;

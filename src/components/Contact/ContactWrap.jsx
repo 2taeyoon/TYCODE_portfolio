@@ -1,12 +1,12 @@
 import React from 'react'
 import ContactCommentWrap from './ContactCommentWrap'
-import ContactEmailViews from './ContactEmailViews'
+import ContactEmailViewsWrap from './ContactEmailViewsWrap'
 
 const ContactWrap = () => {
     return (
         <div className='contact_wrap'>
             <div className='contact_content_wrap'>
-                <ContactEmailViews/>
+                <ContactEmailViewsWrap/>
                 <ContactCommentWrap/>
             </div>
         </div>

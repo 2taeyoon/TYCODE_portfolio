@@ -1,4 +1,4 @@
-@import '../../../pages/Include.scss';
+@import '../../../pages/Mixin.scss';
 
 .header { display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; width: 100%; height: 90px; margin-top: 50px; padding: 0 150px; box-sizing: border-box; color: #fdfdfd; font-size: 18px; transition: 1s; z-index: 1;
     &.active.on .ham_btn_wrap {
