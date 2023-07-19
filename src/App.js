@@ -12,13 +12,14 @@ export const useCursorAnimation = () => {
 };
 
 const App = () => {
-    const [ cursorPosition, setCursorPosition ] = useState({ x: 0, y: 0 });
-    const [ cursorHovered, setCursorHovered ] = useState(false);
-    const [ windowWidth, setWindowWidth ] = useState(false);
-    
-    useEffect(()=>{
+    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+    const [cursorHovered, setCursorHovered] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(false);
+
+
+    useEffect(() => {
         const handleResize = () => {
-            if(window.innerWidth <= 768){
+            if (window.innerWidth <= 768) {
                 setWindowWidth(false);
             } else {
                 setWindowWidth(true);
@@ -28,10 +29,10 @@ const App = () => {
 
         window.addEventListener('resize', handleResize);
 
-        return ()=>{
+        return () => {
             window.removeEventListener('resize', handleResize);
         }
-    },[windowWidth])
+    }, [windowWidth])
 
     const handleMouseMove = (event) => {
         if (!windowWidth) return;
@@ -75,7 +76,7 @@ const App = () => {
         if (!windowWidth) return;
         setCursorHovered(false);
     }
-    
+
     const cursorValue = { animateCursor, handleCursorEnter, handleCursorLeave, animateNoneCursorEnter, animateNoneCursorLeave }
 
     const location = useLocation();
@@ -84,11 +85,11 @@ const App = () => {
 
     return (
         <CursorAnimationContext.Provider value={cursorValue}>
-            <div className={`App ${!windowWidth ? 'default_cursor' : ''}`} onMouseMove={ handleMouseMove }>
-                { showHeader && <Header location={location}/> }
-                <Outlet/>
-                { windowWidth && <div className={`cursor ${cursorHovered ? 'cursor_scale' : ''}`} style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>}
-                { showFooter && <Footer location={location}/> }
+            <div className={`App ${!windowWidth ? 'default_cursor' : ''}`} onMouseMove={handleMouseMove}>
+                {showHeader && <Header location={location} />}
+                <Outlet />
+                {windowWidth && <div className={`cursor ${cursorHovered ? 'cursor_scale' : ''}`} style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>}
+                {showFooter && <Footer location={location} />}
             </div>
         </CursorAnimationContext.Provider>
     );

@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, push, onValue, set } from "firebase/database";
+import { getDatabase, ref, push, onValue, get, set } from "firebase/database";
 import { badWordKor } from '../data/badWord';
 
 const firebaseConfig = {
@@ -68,16 +68,18 @@ export const fetchComments = (callback) => {
 
 export const getHits = (callback) => {
     const hitsRef = ref(database, 'hits');
-    onValue(hitsRef, (snapshot) => {
-        const hitsData = snapshot.val();
-        const hitCount = hitsData ? hitsData : null;
-        callback(hitCount); // 데이터베이스에서 읽은 조회수를 콜백으로 전달
-    });
+    get(hitsRef)
+        .then((snapshot) => {
+            const hitsData = snapshot.val();
+            const hitCount = hitsData ? hitsData : null;
+            callback(hitCount); // 데이터베이스에서 읽은 조회수를 콜백으로 전달
+        })
 }
 
+
 // 조회수를 업데이트하는 함수
-// export const updateHits = async (hitCount) => { // 새로운 인자로 조회수를 받도록 수정
-//     const hitsRef = ref(database, 'hits');
-//     const newHits = hitCount + 1; // 기존 조회수에 1을 더한 값을 새로운 조회수로 설정
-//     await set(hitsRef, newHits, { merge: true }); // { merge: true } = 새 데이터를 기존 데이터와 병합합니다.
-// }
+export const updateHits = (hitCount/*hitCount*/) => { // 새로운 인자로 조회수를 받도록 수정
+    const hitsRef = ref(database, 'hits');
+    const newHits = hitCount + 1; // 기존 조회수에 1을 더한 값을 새로운 조회수로 설정
+    set(hitsRef, newHits, { merge: true }); // { merge: true } = 새 데이터를 기존 데이터와 병합합니다.
+}

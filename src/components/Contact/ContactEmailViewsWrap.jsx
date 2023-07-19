@@ -1,16 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ContactEmailWrap from './ContactEmailWrap'
-import { getHits, updateHits } from '../../api/firebase';
-
+import { getHits, updateHits } from '../../api/firebase'
 
 const ContactEmailViewsWrap = () => {
-    const [hits, setHits] = useState(0);
+    const [hits, setHits] = useState(0); // 조회수를 상태로 관리합니다.
+
     useEffect(() => {
-        //updateHits(hits)
-        getHits((callback) => {
-            setHits(callback);
-        });
-    }, []);
+        //let aa;
+        getHits((callback)=>{
+            //let aa = callback +1;
+            //console.log('aa',aa)
+            //setHits(aa)
+            updateHits(callback);
+            console.log('first', callback)
+            
+            //console.log('밑에 콘솔', updateHits(aa));
+        })
+        
+        
+    },[])
 
     return (
         <>
