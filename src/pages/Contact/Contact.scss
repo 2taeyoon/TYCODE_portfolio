@@ -31,12 +31,14 @@
                     }
                 }
             }
-            .contact_email_views_wrap { display: flex; justify-content: space-between; width: 80%; margin: 0 auto;
-                .contact_email_wrap { display: flex; align-items: center;
-                    .contact_email_title { padding: 0 10px; border-right: 3px solid #fdfdfd; font-size: 20px; font-weight: 600; }
-                    .contact_email { padding: 0 10px; }
+            .contact_email_views_wrap { width: 80%; margin: 0 auto;
+                .contact_views_hits { text-align: right; padding-bottom: 25px; }
+                .contact_email_wrap { display: flex; justify-content: space-between;
+                    > div { display: flex; align-items: center;
+                        .contact_email_title { padding: 0 10px; border-right: 3px solid #fdfdfd; font-size: 20px; font-weight: 600; }
+                        .contact_email { padding: 0 10px; }
+                    }
                 }
-                .contact_views_hits {}
             }
         }
     }
