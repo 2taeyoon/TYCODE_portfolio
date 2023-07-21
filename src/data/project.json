@@ -8,7 +8,7 @@
                 "text": "Personal",
                 "backgroundColor":"#d45a5a"
             },
-            "description": "HTML, Sass, JavaScript, React, React router, Firebase로 진행한 포트폴리오",
+            "description": "HTML, SASS, JavaScript, React, React router, Firebase로 진행한 포트폴리오",
             "image": "project05",
             "skill":[
                 {
@@ -21,7 +21,7 @@
                     ],
                     "sass":[
                         {
-                            "text":"Sass",
+                            "text":"SASS",
                             "icon":"sass_icon",
                             "backgroundColor":"#CC6699"
                         }
@@ -60,7 +60,7 @@
                 "detailGithub":"https://github.com/2taeyoon/TYCODE_portfolio",
                 "detailDemo":"https://2taeyoon.github.io",
                 "detailImage":"project_detail05",
-                "detailDescription": "2023년 7월에 개발한 TYCODE는 HTML, Sass, JavaScript, React, React Router, Firebase를 사용하여 개발하였습니다. TYCODE에는 기술 스택, 프로젝트 목록, 연락처 등의 정보가 포함되어 있습니다. React를 사용하여 컴포넌트 기반으로 제작하였으며, React router를 통해 페이지 간의 라우팅이 구현되어있습니다. 또한, Firebase를 사용하여 사용자가 작성한 댓글을 저장하고 불러오는 기능을 구현하였습니다."
+                "detailDescription": "2023년 7월에 개발한 TYCODE는 HTML, SASS, JavaScript, React, React Router, Firebase를 사용하여 개발하였습니다. TYCODE에는 기술 스택, 프로젝트 목록, 연락처 등의 정보가 포함되어 있습니다. React를 사용하여 컴포넌트 기반으로 제작하였으며, React router를 통해 페이지 간의 라우팅이 구현되어있습니다. 또한, Firebase를 사용하여 사용자가 작성한 댓글을 저장하고 불러오는 기능을 구현하였습니다."
             }
         },
         {
@@ -71,7 +71,7 @@
                 "text":"Personal",
                 "backgroundColor":"#d45a5a"
             },
-            "description":"HTML, Sass, JavaScript, jQuery, Firebase로 진행한 프로그레시브 웹&앱(PWA)",
+            "description":"HTML, SASS, JavaScript, jQuery, Firebase로 진행한 프로그레시브 웹&앱(PWA)",
             "image":"project04",
             "skill":[
                 {
@@ -84,7 +84,7 @@
                     ],
                     "sass":[
                         {
-                            "text":"Sass",
+                            "text":"SASS",
                             "icon":"sass_icon",
                             "backgroundColor":"#CC6699"
                         }
@@ -118,7 +118,7 @@
                 "detailImage":"project_detail04",
                 "detailId":"ID: 2tae@kakao.com",
                 "detailPassword":"Password: 123456",
-                "detailDescription": "2023년 6월에 개발한 MyDays는 HTML, Sass, JavaScript, jQuery, Firebase를 사용하여 제작하였습니다. MyDays는 jQuery UI를 활용하여 달력을 선택하고 선택한 달력의 정보를 Firebase를 통해 디데이 데이터를 저장하고 관리합니다. 또한, MyDays는 PWA의 핵심인 서비스 워커를 사용하여 오프라인 캐싱 기능을 제공하고 있어서 인터넷 연결이 없는 상황에서도 MyDays를 이용할 수 있습니다."
+                "detailDescription": "2023년 6월에 개발한 MyDays는 HTML, SASS, JavaScript, jQuery, Firebase를 사용하여 제작하였습니다. MyDays는 jQuery UI를 활용하여 달력을 선택하고 선택한 달력의 정보를 Firebase를 통해 디데이 데이터를 저장하고 관리합니다. 또한, MyDays는 PWA의 핵심인 서비스 워커를 사용하여 오프라인 캐싱 기능을 제공하고 있어서 인터넷 연결이 없는 상황에서도 MyDays를 이용할 수 있습니다."
             }
         },
         {
@@ -129,7 +129,7 @@
                 "text":"Personal",
                 "backgroundColor":"#d45a5a"
             },
-            "description":"HTML, Sass, JavaScript로 진행한 반응형 웹사이트",
+            "description":"HTML, SASS, JavaScript로 진행한 반응형 웹사이트",
             "image":"project03",
             "skill":[
                 {
@@ -142,7 +142,7 @@
                     ],
                     "sass":[
                         {
-                            "text":"Sass",
+                            "text":"SASS",
                             "icon":"sass_icon",
                             "backgroundColor":"#CC6699"
                         }
@@ -160,7 +160,7 @@
                 "detailGithub":"https://github.com/2taeyoon/task/tree/master/YOONDESIGN",
                 "detailDemo":"https://2taeyoon.github.io/task/YOONDESIGN",
                 "detailImage":"project_detail03",
-                "detailDescription":"2023년 5월에 제작한 YOONDESIGN은 기업 반응형 웹사이트로 Html, Sass, JavaScript를 사용하여 개발되었습니다. YOONDESIGN은 AOS 라이브러리를 활용하여 스크롤 이벤트를 적용하여 웹사이트의 내용이 부드럽게 나타나도록 구현되었습니다. 또한, 문의 페이지에는 구글 reCAPTCHA를 적용하여 스팸 및 악의적인 이용자로부터의 보호를 강화하였습니다."
+                "detailDescription":"2023년 5월에 제작한 YOONDESIGN은 기업 반응형 웹사이트로 HTML, SASS, JavaScript를 사용하여 개발되었습니다. YOONDESIGN은 AOS 라이브러리를 활용하여 스크롤 이벤트를 적용하여 웹사이트의 내용이 부드럽게 나타나도록 구현되었습니다. 또한, 문의 페이지에는 구글 reCAPTCHA를 적용하여 스팸 및 악의적인 이용자로부터의 보호를 강화하였습니다."
             }
         },
         {
@@ -245,7 +245,7 @@
                 "detailGithub":"https://github.com/2taeyoon/task/tree/master/netmable",
                 "detailDemo":"https://2taeyoon.github.io/task/netmable",
                 "detailImage":"project_detail01",
-                "detailDescription": "2023년 3월에 제작한 netmable은 HTML, CSS, JavaScript를 사용하여 기존의 웹사이트를 클론하였습니다. netmable을 제작하며 CSS와 JavaScript를 배우고 응용하는 경험을 쌓았습니다. 클론 코딩을 통해 기존 웹사이트의 디자인과 기능을 분석하고 다시 재현함으로써 웹 개발에 대한 이해도를 향상시켰던 클론 사이트입니다."
+                "detailDescription": "2023년 3월에 제작한 Netmable은 HTML, CSS, JavaScript를 사용하여 기존의 웹사이트를 클론하였습니다. Netmable을 제작하며 CSS와 JavaScript를 배우고 응용하는 경험을 쌓았습니다. 클론 코딩을 통해 기존 웹사이트의 디자인과 기능을 분석하고 다시 재현함으로써 웹 개발에 대한 이해도를 향상시켰던 클론 사이트입니다."
             }
         }
     ]
