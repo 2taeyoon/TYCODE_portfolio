@@ -34,6 +34,7 @@ const App = () => {
         }
     }, [windowWidth])
 
+
     const handleMouseMove = (event) => {
         if (!windowWidth) return;
         const { clientX: x, clientY: y } = event;
@@ -87,7 +88,7 @@ const App = () => {
         <CursorAnimationContext.Provider value={cursorValue}>
             <div className={`App ${!windowWidth ? 'default_cursor' : ''}`} onMouseMove={handleMouseMove}>
                 {showHeader && <Header location={location} />}
-                <Outlet />
+                <Outlet/>
                 {windowWidth && <div className={`cursor ${cursorHovered ? 'cursor_scale' : ''}`} style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>}
                 {showFooter && <Footer location={location} />}
             </div>
