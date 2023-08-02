@@ -57,7 +57,7 @@
     .header_nav { display: flex; height: 100%; line-height: 90px;
         li { display: flex; align-items: center;
             &:hover .header_nav_a { color: #58c96b; animation: color_rotate 2s linear infinite; }
-            .header_nav_a { display: inline-block; padding: 0 50px;
+            .header_nav_a { display: inline-block; padding: 0 30px;
                 span { font-weight: 600; }
             }
         }

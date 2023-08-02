@@ -20,7 +20,7 @@ const ContactEmailViewsWrap = () => {
                 <div className='contact_views_hits'>조회수 {aa}</div>
                 <div className='contact_email_wrap'>
                     <ContactEmailWrap title='E-mail' email='2tae@kakao.com' />
-                    <ContactEmailWrap title='Github' email='2taeyoon' />
+                    <ContactEmailWrap title='Github' email='2taeyoon' gitLink='https://github.com/2taeyoon' />
                 </div>
             </div>
         </>

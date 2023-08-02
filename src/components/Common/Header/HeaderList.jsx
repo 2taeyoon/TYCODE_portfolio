@@ -1,13 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const HeaderList = ({animateCursor, handleCursorEnter, handleCursorLeave}) => {
+const HeaderList = ({animateCursor, handleCursorEnter, handleCursorLeave, headerClass, hamBtnHandler}) => {
     return (
-            ['ABOUT', 'PROJECT', 'CONTACT'].map((text, index) => (
+            ['ABOUT', 'PROJECT', 'CONTACT', 'BLOG'].map((text, index) => (
                 <li key={index}>
-                    <Link to={index === 0 ? '/' : (index === 1 ? '/project' : '/contact')} className='header_nav_a' onMouseMove={animateCursor} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
-                        <span className='animate_cursor'>{text}</span>
-                    </Link>
+                    {index === 3 ? (
+                        <a href='https://velog.io/@2taeyoon' target='_blank' rel='noopener noreferrer' onClick={hamBtnHandler} className={headerClass} onMouseMove={animateCursor} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
+                            <span className='animate_cursor'>{text}</span>
+                        </a>
+                    ) : (
+                        <Link to={index === 0 ? '/' : (index === 1 ? '/project' : '/contact')} onClick={hamBtnHandler} className={headerClass} onMouseMove={animateCursor} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
+                            <span className='animate_cursor'>{text}</span>
+                        </Link>
+                    )}
                 </li>
             ))
     )

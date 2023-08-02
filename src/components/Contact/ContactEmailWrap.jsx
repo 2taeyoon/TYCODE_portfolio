@@ -1,11 +1,11 @@
 import React from 'react'
 
-const ContactEmailWrap = ({title, email}) => {
+const ContactEmailWrap = ({title, email, gitLink}) => {
     return (
-        <div>
+        <a href={gitLink} target='_blank' rel='noopener noreferrer'>
             <div className='contact_email_title'>{title}</div>
             <div className='contact_email'>{email}</div>
-        </div>
+        </a>
     )
 }
 
