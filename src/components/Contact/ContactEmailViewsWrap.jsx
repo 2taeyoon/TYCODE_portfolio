@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ContactEmailWrap from './ContactEmailWrap'
 import { getHits, updateHits } from '../../api/firebase'
 
+
 const ContactEmailViewsWrap = () => {
     const [hits, setHits] = useState(0); // 조회수를 상태로 관리합니다.
 
@@ -19,8 +20,8 @@ const ContactEmailViewsWrap = () => {
             <div className='contact_email_views_wrap'>
                 <div className='contact_views_hits'>조회수 {aa}</div>
                 <div className='contact_email_wrap'>
-                    <ContactEmailWrap title='E-mail' email='2tae@kakao.com' />
-                    <ContactEmailWrap title='Github' email='2taeyoon' gitLink='https://github.com/2taeyoon' />
+                    <ContactEmailWrap title='E-mail' email='2tae@kakao.com' link='mailto:2tae@kakao.com'/>
+                    <ContactEmailWrap title='Github' email='2taeyoon' link='https://github.com/2taeyoon' />
                 </div>
             </div>
         </>
