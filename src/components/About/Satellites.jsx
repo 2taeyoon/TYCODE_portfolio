@@ -12,7 +12,7 @@ const Satellites = () => {
         const generateRandomTops = () => {
             const minTop = -5;
             const maxTop = 5;
-            const tops = Array.from({ length: 16 }, () => {
+            const tops = Array.from({ length: 22 }, () => {
                 const randomMultiplier = Math.floor(Math.random() * (maxTop - minTop + 1)) + minTop;
                 return randomMultiplier * 10;
             });
@@ -42,26 +42,16 @@ const Satellites = () => {
         generateRandomTops();
     }, []);
 
+    const technologies = [
+        'HTML', 'CSS', 'JavaScript', 'Git', 'jQuery', 
+        'Sass', 'React', 'ReactRouter', 'TypeScript', 
+        'Redux', 'Vue'
+    ];
+    
     const getSatelliteContent = (index) => {
-        if (index === 0 || index === 8) {
-            return 'HTML';
-        } else if (index === 1 || index === 9) {
-            return 'CSS';
-        } else if (index === 2 || index === 10) {
-            return 'JavaScript';
-        } else if (index === 3 || index === 11) {
-            return 'Git';
-        } else if (index === 4 || index === 12) {
-            return 'jQuery';
-        } else if (index === 5 || index === 13) {
-            return 'Sass';
-        } else if (index === 6 || index === 14) {
-            return 'React';
-        } else if (index === 7 || index === 15) {
-            return 'Vue';
-        }
+        const adjustedIndex = index % technologies.length;
+        return technologies[adjustedIndex];
     };
-
     return (
         <div className='satellites_wrap'>
             <div className='satellites'>
