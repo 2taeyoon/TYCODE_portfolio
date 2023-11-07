@@ -44,8 +44,7 @@ const Satellites = () => {
 
     const technologies = [
         'HTML', 'CSS', 'JavaScript', 'Git', 'jQuery', 
-        'Sass', 'React', 'ReactRouter', 'TypeScript', 
-        'Redux', 'Vue'
+        'Sass', 'React', 'ReactRouter', 'TypeScript', 'Vue'
     ];
     
     const getSatelliteContent = (index) => {

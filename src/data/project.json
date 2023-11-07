@@ -1,69 +1,6 @@
 {
     "project":[
         {
-            "id":"06",
-            "title":"SecretPost",
-            "date":"2023년 09월",
-            "type":{
-                "text": "Personal",
-                "backgroundColor":"#d45a5a"
-            },
-            "description":"HTML, CSS, TypeScript, React, React router, Firebase로 진행한 웹&앱 프로그래시브(PWA)",
-            "image":"project06",
-            "skill":[
-                {
-                    "html":[
-                        {
-                            "text":"HTML",
-                            "icon":"html_icon",
-                            "backgroundColor":"#E34F26"
-                        }
-                    ],
-                    "css":[
-                        {
-                            "text":"CSS",
-                            "icon":"css_icon",
-                            "backgroundColor":"#1572B6"
-                        }
-                    ],
-                    "typescript":[
-                        {
-                            "text":"TypeScript",
-                            "icon":"typescript_icon",
-                            "backgroundColor":"#3178C6"
-                        }
-                    ],
-                    "react":[
-                        {
-                            "text":"React",
-                            "icon":"react_icon",
-                            "backgroundColor":"#57c0dd"
-                        }
-                    ],
-                    "reactRouter":[
-                        {
-                            "text":"React Router",
-                            "icon":"reactrouter_icon",
-                            "backgroundColor":"#CA4245"
-                        }
-                    ],
-                    "firebase":[
-                        {
-                            "text":"Firebase",
-                            "icon":"firebase_icon",
-                            "backgroundColor":"#FFCA28"
-                        }
-                    ]
-                }
-            ],
-            "detail":{
-                "detailGithub":"https://github.com/2taeyoon/task/tree/master/SecretPost",
-                "detailDemo":"https://2taeyoon.github.io/SecretPost_portfolio/",
-                "detailImage":"",
-                "detailDescription":"2023년 9월에 개발한 SecretPost는 HTML, CSS, TypeScript, React, React router, Firebase를 사용하여 개발하였용하여 습니다. React를 사컴포넌트 기반으로 제작하였으며, React router를 통해 페이지 간의 라우팅이 구현되어있습니다. 또한, Firebase를 사용하여 사용자의 비밀 게시물과 공유된 모든 게시물을 불러오고 있습니다."
-            }
-        },
-        {
             "id":"05",
             "title":"TYCODE",
             "date":"2023년 07월",
